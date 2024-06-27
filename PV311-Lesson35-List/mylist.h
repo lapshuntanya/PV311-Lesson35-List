@@ -43,4 +43,19 @@ namespace MyList {
 		}
 
 	};
+
+	template<typename U>
+	class DList {
+		DNode<U>* head;
+		DNode<U>* tail;
+	public:
+		DList() {
+			head = tail = nullptr;
+		}
+		~DList() {
+
+		}
+
+	};
+
 }
