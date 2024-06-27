@@ -98,8 +98,13 @@ namespace MyList {
 		}
 
 		DNode<U>* search(U value) {
-			//Знайти вузол з заданим значенням та повернути його
-			//Якщо такого вузла немає повернути nullptr
+			DNode<U>* p = head;
+			while (p != nullptr) {
+				if (p->item == value) return p;
+
+				p = p->next;
+			}
+			return nullptr;
 		}
 	};
 
