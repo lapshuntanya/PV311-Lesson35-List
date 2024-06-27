@@ -53,7 +53,14 @@ namespace MyList {
 			head = tail = nullptr;
 		}
 		~DList() {
-
+			DNode<U>* p = head;
+			while (p!=nullptr)
+			{
+				DNode<U>* tmp = p;
+				p = p->next;
+				cout << "delete: " << tmp->item << endl;
+				delete tmp;
+			}
 		}
 
 		void push_back(U value) {
@@ -88,6 +95,11 @@ namespace MyList {
 					p = p->prev;
 				}
 			}cout << endl;
+		}
+
+		DNode<U>* search(U value) {
+			//Знайти вузол з заданим значенням та повернути його
+			//Якщо такого вузла немає повернути nullptr
 		}
 	};
 
