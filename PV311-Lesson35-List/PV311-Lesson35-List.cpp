@@ -1,4 +1,5 @@
 #include "mylist.h"
+#include <string>
 
 int main()
 {
@@ -25,11 +26,11 @@ int main()
 
     */
 
-    List<int> a;
-    a.push_back(7);
-    a.push_back(12);
-    a.push_back(-6);
-    a.push_back(123);
+    List<std::string> a;
+    a.push_back("Daniil");
+    a.push_back("Mykola");
+    a.push_back("Artur");
+    a.push_back("Lyudmyla");
 
     a.showInfo();
 }
