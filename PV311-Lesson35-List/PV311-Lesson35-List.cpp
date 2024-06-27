@@ -34,6 +34,14 @@ int main()
 
     a.showInfo();
     a.showReverseInfo();
+    cout << "++++++++++++++++++++++++++++\n\n";
+    auto p = a.search("Mykola");
+    if (p != nullptr) p->show();
+    else cout << "not found\n";
+
+    p = a.search("Danylo");
+    if (p != nullptr) p->show();
+    else cout << "not found\n";
 
 }
 
