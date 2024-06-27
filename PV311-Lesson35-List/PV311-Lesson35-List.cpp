@@ -26,13 +26,15 @@ int main()
 
     */
 
-    List<std::string> a;
+    DList<std::string> a;
     a.push_back("Daniil");
     a.push_back("Mykola");
     a.push_back("Artur");
     a.push_back("Lyudmyla");
 
     a.showInfo();
+    a.showReverseInfo();
+
 }
 
 
