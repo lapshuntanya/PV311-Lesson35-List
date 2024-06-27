@@ -73,16 +73,21 @@ namespace MyList {
 			if (head == nullptr) cout << "list is empty\n";
 			else {
 				DNode<U>* p = head;
-				while (p != nullptr)
-				{
+				while (p != nullptr){
 					cout << p->item << " ";
 					p = p->next;
 				}
 			}cout << endl;
 		}
-		void showReverseInfo()const
-		{
-
+		void showReverseInfo()const	{
+			if (head == nullptr) cout << "list is empty\n";
+			else {
+				DNode<U>* p = tail;
+				while (p != nullptr){
+					cout << p->item << " ";
+					p = p->prev;
+				}
+			}cout << endl;
 		}
 	};
 
