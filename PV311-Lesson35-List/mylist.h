@@ -56,6 +56,34 @@ namespace MyList {
 
 		}
 
+		void push_back(U value) {
+			DNode<U>* el = new DNode<U>(value);
+
+			if (head == nullptr) {
+				head = tail = el;
+			}
+			else {
+				tail->next = el;
+				el->prev = tail;
+				tail = el;
+			}
+		}
+
+		void showInfo()const {
+			if (head == nullptr) cout << "list is empty\n";
+			else {
+				DNode<U>* p = head;
+				while (p != nullptr)
+				{
+					cout << p->item << " ";
+					p = p->next;
+				}
+			}cout << endl;
+		}
+		void showReverseInfo()const
+		{
+
+		}
 	};
 
 }
