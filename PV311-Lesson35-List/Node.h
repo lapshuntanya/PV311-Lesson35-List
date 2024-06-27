@@ -12,6 +12,7 @@ namespace MyList {
 		Node* next;
 
 		Node(T value) { item = value; next = nullptr; }
+		
 		void show()const {
 			cout << "item: " << item << endl;
 			cout << "\tnext: " << next << endl;

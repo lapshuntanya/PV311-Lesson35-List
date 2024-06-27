@@ -1,8 +1,29 @@
-#include <iostream>
+#include "Node.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //7 12 -6 123
+    using namespace MyList;
+
+    Node<int> first(7);     //item=7, next=&second
+
+    Node<int> second(12);   //item=12, next=&third
+    first.next = &second;
+
+    Node<int> third(-6);    //item=-6, next = &fourth
+    second.next = &third;
+
+    Node<int> fourth(123); //item=123, next = nullptr
+    third.next = &fourth;
+
+    //Обробка списку
+    Node<int>* p = &first;
+    while (p != nullptr) {
+        cout << p->item << " "; //7
+        p = p->next;
+    }
+
+
 }
 
 
