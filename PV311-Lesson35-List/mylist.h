@@ -37,6 +37,7 @@ namespace MyList {
 				while (p != nullptr)
 				{
 					p->show();
+					p = p->next;
 				}
 			}
 		}
